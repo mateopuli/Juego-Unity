@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CharacterMovement : MonoBehaviour
 {
-    float movementSpeed = 0.06f;
+    float movementSpeed = 0.04f;
 
     public GameObject perdio;
     public GameObject gano;
@@ -39,7 +39,7 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movementSpeed = movementSpeed + 0.0005f;
+        movementSpeed = movementSpeed + 0.0003f;
         if (Time.time > muerte + 3)
         {
             int tiempo = Mathf.FloorToInt(Time.time);
@@ -110,7 +110,7 @@ public class CharacterMovement : MonoBehaviour
         {
             hasJumped = true;
         }
-        if (col.gameObject.name == "Cylinder(Clone)")
+        if (col.gameObject.name == "Instantiate(Clone)")
         {
             transform.position = new Vector3(0, 1.1f, -98);
             transform.eulerAngles = new Vector3(0, 0, 0);
